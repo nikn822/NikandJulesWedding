@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head>
+<html lang="en" class="locked"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nik &amp; Julianna | June 12, 2027</title>
@@ -21,23 +21,6 @@
 @media(max-width:760px){.links{display:none}.hero{min-height:650px}.split{grid-template-columns:1fr}.split-img{height:70vh}.grid,.inputrow,.travel-grid{grid-template-columns:1fr;display:grid}.tile{height:430px}.travel-card{padding:18px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
-/* SPLASH PASSWORD GATE */
-body.site-locked{overflow:hidden}
-body.site-locked .nav .links{opacity:.35;pointer-events:none}
-.hero-gate{position:relative;margin:28px auto 0;width:min(560px,92vw);padding:18px;border:1px solid rgba(255,255,255,.18);border-radius:24px;background:rgba(0,0,0,.26);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 24px 80px rgba(0,0,0,.28)}
-.gate-row{display:flex;gap:10px}
-.gate-row input{width:100%;border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:15px 16px;background:rgba(255,250,243,.92);outline:none;text-transform:uppercase;letter-spacing:.09em;color:#141414}
-.gate-row button{white-space:nowrap}
-.gate-note{font-size:12px;color:rgba(255,255,255,.68);margin:10px 0 0;line-height:1.5}
-.gate-error{display:none;color:#ffd2d2;font-size:13px;margin-top:10px}
-.gate-error.show{display:block}
-.gate-success{display:none;color:#d8f5df;font-size:13px;margin-top:10px}
-.gate-success.show{display:block}
-body:not(.site-locked) .hero-gate{display:none}
-.locked-hint{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);z-index:4;color:rgba(255,255,255,.55);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
-body:not(.site-locked) .locked-hint{display:none}
-@media(max-width:760px){.gate-row{display:grid}.hero-gate{padding:14px}}
-
 /* LOCAL VERBIAGE EDITOR */
 .editor-toolbar{position:fixed;right:18px;bottom:18px;z-index:99999;background:rgba(9,36,28,.94);color:#fff;border:1px solid rgba(255,255,255,.18);box-shadow:0 24px 70px rgba(0,0,0,.35);border-radius:18px;padding:14px;display:none;gap:10px;align-items:center;backdrop-filter:blur(18px);font-family:Inter,system-ui,sans-serif}
 body.edit-mode .editor-toolbar{display:flex}
@@ -50,21 +33,40 @@ body.edit-mode .nav{z-index:99998}
 .editor-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:100000;background:#18382d;color:#fff;padding:12px 18px;border-radius:999px;box-shadow:0 18px 55px rgba(0,0,0,.25);display:none}
 .editor-toast.show{display:block}
 
+
+
+/* PASSWORD GATE FINAL LAYOUT */
+html.locked, body.locked{height:100%;overflow:hidden;}
+body.locked .hero{height:100svh;min-height:720px;place-items:stretch;}
+body.locked .hero img{inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:saturate(.98) contrast(1.03);transform:none!important;}
+body.locked .shade{background:linear-gradient(to bottom,rgba(4,15,13,.42) 0%,rgba(4,15,13,.10) 15%,rgba(0,0,0,0) 38%,rgba(0,0,0,.06) 62%,rgba(0,0,0,.72) 100%);}
+body.locked .hero-copy{display:none;}
+body.locked .nav{top:14px;left:14px;right:14px;transform:none;width:auto;max-width:none;border-radius:24px;padding:16px 22px;background:rgba(9,22,20,.64);border:1px solid rgba(255,255,255,.16);box-shadow:0 18px 60px rgba(0,0,0,.18);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+body.locked .nav .brand{font-size:26px;white-space:nowrap;}
+.gate-meta{display:flex;align-items:center;gap:24px;justify-content:center;flex:1;margin:0 24px;color:rgba(255,255,255,.82);font-size:12px;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap;}
+.gate-meta span:first-child{color:var(--gold);}
+.gate-meta i{display:block;width:1px;height:14px;background:rgba(200,162,74,.55);}
+body.locked .links a{color:#fff;opacity:.9;pointer-events:none;}
+body:not(.locked) .gate-meta{display:none;}
+.gate-box{position:absolute;z-index:6;left:50%;bottom:7.5vh;transform:translateX(-50%);width:min(720px,calc(100% - 44px));background:linear-gradient(180deg,rgba(22,27,24,.78),rgba(7,13,11,.82));border:1px solid rgba(255,255,255,.20);box-shadow:0 26px 90px rgba(0,0,0,.40);border-radius:24px;padding:22px 26px 18px;text-align:center;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+.gate-box h2{font-family:Cormorant Garamond,serif;font-weight:300;font-size:31px;letter-spacing:.02em;margin:0 0 15px;color:rgba(255,255,255,.92);}
+.gate-inputrow{display:grid;grid-template-columns:1fr 156px;gap:14px;align-items:center;}
+.gate-inputrow input{height:58px;border:0;border-radius:17px;background:#fffaf3;color:#20201d;padding:0 22px;font-size:18px;letter-spacing:.16em;text-transform:uppercase;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05);}
+.gate-inputrow button{height:58px;border-radius:17px;background:#174f3c;color:#fff;letter-spacing:.12em;font-size:16px;box-shadow:0 10px 30px rgba(0,0,0,.18);}
+.gate-inputrow button:hover{background:#1f654c;}
+.gate-hint{margin:14px 0 0;color:rgba(255,255,255,.78);font-size:14px;line-height:1.5;}
+.gate-error{display:none;margin-top:10px;color:#ffd0d0;font-size:14px;}
+.gate-error.show{display:block;}
+.unlock-cue{position:absolute;z-index:5;left:50%;bottom:1.8vh;transform:translateX(-50%);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.46);}
+body:not(.locked) .gate-box, body:not(.locked) .unlock-cue{display:none;}
+@media(max-width:980px){.gate-meta{display:none;}body.locked .nav{justify-content:space-between}.gate-inputrow{grid-template-columns:1fr}.gate-inputrow button{width:100%;}.gate-box{bottom:5.5vh;padding:20px}.gate-box h2{font-size:28px}}
+@media(max-width:600px){body.locked .nav .brand{font-size:22px}.gate-box{width:calc(100% - 28px);bottom:4vh;border-radius:22px}.gate-inputrow input{font-size:14px;letter-spacing:.12em}.gate-hint{font-size:12px}}
+
 </style>
 </head>
-<body class="site-locked">
-<nav class="nav scrolled" id="nav"><a class="brand" href="#">Nik &amp; Julianna</a><div class="links"><a href="#story">Story</a><a href="#venue">Venue</a><a href="#accommodations">Accommodations</a><a href="#gallery">Gallery</a><a href="#rsvp">RSVP</a></div></nav>
-<section class="hero"><img id="heroImg" src="images/photo1.jpg" alt="Nik and Julianna" style="--py: 90px; --scale: 1.06;"><div class="shade"></div><div class="hero-copy"><span class="eyebrow fade-in d1">June 12, 2027</span><h1 class="fade-in d2">Nik <em>&amp;</em> Julianna</h1><div class="date fade-in d3"><span>Leesburg, Virginia</span><span class="rule"></span><span>Faith Like A Mustard Seed Farm</span></div>
-<div class="hero-gate fade-in d3" id="heroGate">
-  <div class="gate-row">
-    <input id="gateCode" type="text" placeholder="Enter invitation passcode" autocomplete="off">
-    <button type="button" onclick="unlockFromGate()">Unlock</button>
-  </div>
-  <p class="gate-note">Enter the passcode from your invitation to unlock the wedding site and RSVP details.</p>
-  <div class="gate-error" id="gateErr">That passcode was not found.</div>
-  <div class="gate-success" id="gateSuccess">Invite unlocked.</div>
-</div>
-</div><div class="locked-hint">Unlock to continue</div></section>
+<body class="locked">
+<nav class="nav gate-nav" id="nav"><a class="brand" href="#">Nik &amp; Julianna</a><div class="gate-meta"><span>June 12, 2027</span><i></i><span>Leesburg, Virginia</span><i></i><span>Faith Like A Mustard Seed Farm</span></div><div class="links"><a href="#story">Story</a><a href="#venue">Venue</a><a href="#accommodations">Accommodations</a><a href="#gallery">Gallery</a><a href="#rsvp">RSVP</a></div></nav>
+<section class="hero"><img id="heroImg" src="images/photo1.jpg" alt="Nik and Julianna" style="--py: 0px; --scale: 1;"><div class="shade"></div><div class="hero-copy"><span class="eyebrow fade-in d1">June 12, 2027</span><h1 class="fade-in d2">Nik <em>&amp;</em> Julianna</h1><div class="date fade-in d3"><span>Leesburg, Virginia</span><span class="rule"></span><span>Faith Like A Mustard Seed Farm</span></div></div><div class="gate-box" id="gateBox"><h2>Enter Invitation Code</h2><div class="gate-inputrow"><input id="gateCode" type="text" placeholder="Enter invitation passcode"><button onclick="unlockFromGate()">Unlock</button></div><p class="gate-hint">Enter the passcode from your invitation to unlock the wedding site and RSVP details.</p><div class="gate-error" id="gateErr">That passcode was not found.</div></div><div class="unlock-cue">Unlock to continue</div></section>
 <section class="apple-section dark" id="story"><div class="reveal"><span class="eyebrow">Our Wedding</span><h2 class="bigline">A celebration with the people we love most.</h2><p class="body">We cannot wait to tie the knot June 12, 2027!</p></div></section>
 <div class="sticky-wrap"><section class="sticky"><img id="stickyPhoto" src="images/photo2.jpg" alt="Engagement photo" style="--s: 1.16; --y: -50px;"><div class="sticky-card reveal"><span class="eyebrow">The Weekend</span><h2 class="bigline">Good food, family, friends, and an unforgettable night.</h2></div></section></div>
 <section class="split"><div class="split-img reveal left"><img src="images/photo3.jpg" alt="Engagement photo"></div><div class="split-text reveal right"><span class="eyebrow">The Day</span><h2>Saturday, June 12</h2><p>Use your invitation passcode to unlock your party, meal choices, and other details regarding our weekend of celebration.</p></div></section>
@@ -76,105 +78,64 @@ body.edit-mode .nav{z-index:99998}
 <script>
 const API_URL = "https://script.google.com/macros/s/AKfycbyGrIixtUPG1UMU3vjNbqrz2ydN9SznH3CP-vXAUXf8nqJGDkTQaZsLlmyZUogmFq93Mg/exec";
 let currentInvite = null;
-let siteUnlocked = false;
 const nav = document.getElementById('nav');
 const hero = document.getElementById('heroImg');
 const stickyPhoto = document.getElementById('stickyPhoto');
-
-function setSiteUnlocked(inv){
-  siteUnlocked = true;
-  document.body.classList.remove('site-locked');
-  sessionStorage.setItem('weddingInviteUnlocked','1');
-  sessionStorage.setItem('weddingInviteCode', inv?.code || '');
-  const gateSuccess=document.getElementById('gateSuccess');
-  if(gateSuccess) gateSuccess.classList.add('show');
-}
-function blockLockedScroll(e){
-  if(siteUnlocked || !document.body.classList.contains('site-locked')) return;
-  const tag = (e.target && e.target.tagName || '').toLowerCase();
-  if(tag === 'input' || tag === 'button') return;
-  e.preventDefault();
-  window.scrollTo(0,0);
-}
-['wheel','touchmove'].forEach(ev=>addEventListener(ev,blockLockedScroll,{passive:false}));
-addEventListener('keydown',e=>{
-  if(siteUnlocked || !document.body.classList.contains('site-locked')) return;
-  const keys=['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '];
-  if(keys.includes(e.key)){e.preventDefault();window.scrollTo(0,0);}
-});
-function syncCodeInputs(value){
-  const code=document.getElementById('code');
-  const gateCode=document.getElementById('gateCode');
-  if(code) code.value=value;
-  if(gateCode) gateCode.value=value;
-}
-function unlockFromGate(){
-  const gateCode=document.getElementById('gateCode');
-  syncCodeInputs(gateCode ? gateCode.value : '');
-  unlock(true);
-}
-function onScroll(){if(!siteUnlocked&&document.body.classList.contains('site-locked')&&(window.scrollY||0)>2){window.scrollTo(0,0);return;}const y=window.scrollY||0;if(nav)nav.classList.toggle('scrolled',y>40);if(hero){hero.style.setProperty('--py',Math.min(y*.18,90)+'px');hero.style.setProperty('--scale',1+Math.min(y*.00012,.06));}if(stickyPhoto){const wrap=stickyPhoto.closest('.sticky-wrap');if(wrap){const r=wrap.getBoundingClientRect();const p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));stickyPhoto.style.setProperty('--s',1+p*.16);stickyPhoto.style.setProperty('--y',(-p*50)+'px');}}}
+function onScroll(){const y=window.scrollY||0;if(nav)nav.classList.toggle('scrolled',y>40);if(hero){hero.style.setProperty('--py',Math.min(y*.18,90)+'px');hero.style.setProperty('--scale',1+Math.min(y*.00012,.06));}if(stickyPhoto){const wrap=stickyPhoto.closest('.sticky-wrap');if(wrap){const r=wrap.getBoundingClientRect();const p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));stickyPhoto.style.setProperty('--s',1+p*.16);stickyPhoto.style.setProperty('--y',(-p*50)+'px');}}}
 addEventListener('scroll',onScroll,{passive:true});onScroll();
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.16});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 function validApi(){return API_URL.startsWith('https://script.google.com/macros/s/')&&API_URL.endsWith('/exec');}
 function esc(s){return String(s ?? '').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-async function unlock(fromGate=false){
-  const codeEl=document.getElementById('code');
-  const gateCodeEl=document.getElementById('gateCode');
-  const raw=(fromGate && gateCodeEl ? gateCodeEl.value : (codeEl?.value || gateCodeEl?.value || '')).trim().toUpperCase();
-  syncCodeInputs(raw);
-  const err=document.getElementById('err');
-  const gateErr=document.getElementById('gateErr');
-  const panel=document.getElementById('panel');
+async function lookupInvite(raw, ui){
+  const err = ui === 'gate' ? document.getElementById('gateErr') : document.getElementById('err');
+  const panel = document.getElementById('panel');
   if(err) err.classList.remove('show');
-  if(gateErr) gateErr.classList.remove('show');
-  if(panel){panel.classList.add('show');panel.innerHTML='<p class="hint">Checking invite...</p>';}
+  if(ui !== 'gate'){
+    panel.classList.add('show');
+    panel.innerHTML='<p class="hint">Checking invite...</p>';
+  }
   if(!validApi()){
-    if(panel) panel.innerHTML='';
     const msg='The RSVP backend is not connected yet. Paste your deployed Apps Script Web App URL into API_URL.';
+    if(ui !== 'gate') panel.innerHTML='';
     if(err){err.textContent=msg;err.classList.add('show');}
-    if(gateErr){gateErr.textContent=msg;gateErr.classList.add('show');}
     return;
   }
   try{
     const res=await fetch(API_URL,{method:'POST',body:JSON.stringify({action:'lookup',code:raw})});
     const inv=await res.json();
     if(!inv.success){
-      const msg=inv.message||'That passcode was not found.';
-      if(err){err.textContent=msg;err.classList.add('show');}
-      if(gateErr){gateErr.textContent=msg;gateErr.classList.add('show');}
-      if(panel) panel.classList.remove('show');
+      if(err){err.textContent=inv.message||'That passcode was not found.';err.classList.add('show');}
+      if(ui !== 'gate') panel.classList.remove('show');
       return;
     }
     currentInvite=inv;
-    setSiteUnlocked(inv);
+    sessionStorage.setItem('weddingUnlocked','1');
+    sessionStorage.setItem('weddingCode', raw);
+    document.documentElement.classList.remove('locked');
+    document.body.classList.remove('locked');
+    const rsvpCode=document.getElementById('code');
+    if(rsvpCode) rsvpCode.value=raw;
     renderInvite(inv);
-    if(fromGate){
-      setTimeout(()=>document.getElementById('story')?.scrollIntoView({behavior:'smooth'}),450);
-    }
+    if(ui === 'gate') window.scrollTo({top:0,behavior:'smooth'});
   }catch(e){
     const msg='Could not connect to RSVP backend. Check your Apps Script deployment.';
     if(err){err.textContent=msg;err.classList.add('show');}
-    if(gateErr){gateErr.textContent=msg;gateErr.classList.add('show');}
-    if(panel) panel.classList.remove('show');
+    if(ui !== 'gate') panel.classList.remove('show');
   }
 }
+function unlock(){
+  const raw=document.getElementById('code').value.trim().toUpperCase();
+  lookupInvite(raw,'rsvp');
+}
+function unlockFromGate(){
+  const raw=document.getElementById('gateCode').value.trim().toUpperCase();
+  lookupInvite(raw,'gate');
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Enter' && document.activeElement && document.activeElement.id==='gateCode') unlockFromGate();
+});
 function renderInvite(inv){const panel=document.getElementById('panel');panel.innerHTML=`<div class="welcome">Welcome, ${esc(inv.party)}</div><p class="hint">Seats reserved: ${inv.guests.length}</p><div class="eventbox"><div class="grid"><div class="mini"><b>Date</b>June 12, 2027</div><div class="mini"><b>Meal choices</b>Vegetarian or Chicken</div><div class="mini"><b>Venue</b>Faith Like A Mustard Seed Farm</div><div class="mini"><b>Invite</b>${inv.guests.length} guest${inv.guests.length>1?'s':''}</div></div></div>${inv.guests.map((g,i)=>`<div class="guest"><h4>${esc(g)}</h4><p class="hint">Attending?</p><div class="meals"><label><input type="radio" name="attending_${i}" value="Yes"><span>Yes</span></label><label><input type="radio" name="attending_${i}" value="No"><span>No</span></label></div><p class="hint">Meal choice</p><div class="meals"><label><input type="radio" name="meal_${i}" value="Vegetarian"><span>Vegetarian</span></label><label><input type="radio" name="meal_${i}" value="Chicken"><span>Chicken</span></label></div></div>`).join('')}<div class="indian ${inv.indianEvent?'show':''}"><h3>Secondary Indian Celebration</h3><p>This invite includes access to the Indian celebration details. More details will be shared here as we get closer.</p></div><button class="save" onclick="saveRsvp()">Save RSVP</button><div class="saved" id="saved">RSVP saved.</div>`;}
 async function saveRsvp(){if(!currentInvite)return;const responses=currentInvite.guests.map((g,i)=>({guest:g,attending:document.querySelector(`input[name="attending_${i}"]:checked`)?.value||'',meal:document.querySelector(`input[name="meal_${i}"]:checked`)?.value||'',indianEventRSVP:currentInvite.indianEvent?'Invited':'Not Invited'}));await fetch(API_URL,{method:'POST',body:JSON.stringify({action:'submit',code:currentInvite.code,party:currentInvite.party,responses})});document.getElementById('saved').classList.add('show');}
-
-const gateCodeInput=document.getElementById('gateCode');
-if(gateCodeInput){
-  gateCodeInput.addEventListener('keydown',e=>{
-    if(e.key==='Enter') unlockFromGate();
-  });
-}
-const rsvpCodeInput=document.getElementById('code');
-if(rsvpCodeInput){
-  rsvpCodeInput.addEventListener('keydown',e=>{
-    if(e.key==='Enter') unlock(false);
-  });
-}
-
 </script>
 
 

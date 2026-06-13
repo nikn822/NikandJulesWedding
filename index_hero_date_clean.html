@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" class="locked"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nik &amp; Julianna | June 12, 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+:root{--green:#18382d;--green2:#09241c;--cream:#fbf6ed;--gold:#c8a24a;--blue:#9eb4c8;--ink:#141414;--muted:#7b766c;--blur:blur(24px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050605;color:#fff;font-family:Inter,system-ui,sans-serif;overflow-x:hidden}a{color:inherit}button,input,select{font:inherit}
+.nav{position:fixed;z-index:20;top:16px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border:1px solid rgba(255,255,255,.12);background:rgba(12,18,16,.28);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border-radius:999px;transition:.35s}.nav.scrolled{background:rgba(12,18,16,.78);box-shadow:0 20px 60px rgba(0,0,0,.25)}.brand{font-family:Cormorant Garamond,serif;font-size:22px;letter-spacing:.04em;text-decoration:none}.links{display:flex;gap:18px}.links a{font-size:12px;text-decoration:none;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.hero{height:100svh;min-height:720px;position:relative;display:grid;place-items:end center;overflow:hidden;background:#000}.hero img{position:absolute;inset:-8% 0 0;width:100%;height:116%;object-fit:cover;filter:saturate(.95) contrast(1.05);transform:translate3d(0,var(--py,0),0) scale(var(--scale,1));will-change:transform}.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.02) 40%,rgba(0,0,0,.75) 86%,#050605)}.hero-copy{position:relative;text-align:center;padding:0 22px 12vh;max-width:980px}.eyebrow{display:block;color:var(--gold);font-size:12px;letter-spacing:.42em;text-transform:uppercase;margin-bottom:18px}h1{font-family:Cormorant Garamond,serif;font-weight:300;font-size:clamp(64px,13vw,152px);line-height:.86;margin:0;letter-spacing:-.04em}h1 em{color:rgba(255,255,255,.58);font-style:italic}.date{margin-top:24px;display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;color:rgba(255,255,255,.72);font-size:13px;letter-spacing:.22em;text-transform:uppercase}.rule{width:54px;height:1px;background:rgba(200,162,74,.6)}
+.hero-event-date{margin-top:22px;color:var(--gold);font-size:clamp(14px,1.35vw,19px);font-weight:500;letter-spacing:.34em;text-transform:uppercase;text-shadow:0 2px 18px rgba(0,0,0,.65)}
+.hero-location-block{margin-top:20px;text-align:center;text-shadow:0 2px 20px rgba(0,0,0,.70)}
+.hero-venue-name{font-size:clamp(13px,1.45vw,20px);font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.88)}
+.hero-venue-location{margin-top:9px;font-size:clamp(12px,1vw,15px);font-weight:400;letter-spacing:.30em;text-transform:uppercase;color:rgba(255,255,255,.68)}
+body:not(.locked) .hero-copy{padding-bottom:15vh;max-width:1180px}
+.fade-in{opacity:0;transform:translateY(34px);animation:up .9s cubic-bezier(.16,1,.3,1) forwards}.d1{animation-delay:.18s}.d2{animation-delay:.36s}.d3{animation-delay:.58s}@keyframes up{to{opacity:1;transform:none}}
+.apple-section{min-height:100svh;position:relative;display:grid;place-items:center;overflow:hidden;padding:110px 22px}.dark{background:#050605}.cream{background:var(--cream);color:var(--ink)}.forest{background:radial-gradient(circle at 30% 0%,#315f4b,var(--green2) 64%)}.bigline{font-family:Cormorant Garamond,serif;font-size:clamp(42px,7vw,92px);font-weight:300;line-height:1.02;max-width:980px;text-align:center;margin:0}.bigline em{color:var(--blue)}.body{font-size:17px;line-height:1.9;color:rgba(255,255,255,.58);max-width:640px;text-align:center;margin:28px auto 0}.cream .body{color:var(--muted)}
+.sticky-wrap{height:240vh;background:#000;position:relative}.sticky{position:sticky;top:0;height:100svh;display:grid;place-items:center;overflow:hidden}.sticky img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:var(--op,.9);transform:scale(var(--s,1)) translateY(var(--y,0));filter:brightness(.72)}.sticky-card{position:relative;text-align:center;width:min(880px,90vw);padding:46px 28px;border:1px solid rgba(255,255,255,.14);border-radius:30px;background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:100svh}.split-img{position:relative;overflow:hidden;background:#111}.split-img img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.06);transition:1s cubic-bezier(.16,1,.3,1)}.split-img:hover img{transform:scale(1.01)}.split-text{display:flex;flex-direction:column;justify-content:center;padding:8vw;background:var(--green2)}.split-text h2{font-family:Cormorant Garamond,serif;font-weight:300;font-size:clamp(42px,5vw,74px);line-height:1;margin:0 0 24px}.split-text p{max-width:430px;color:rgba(255,255,255,.62);line-height:1.9}.reveal{opacity:0;transform:translateY(70px) scale(.98);transition:1s cubic-bezier(.16,1,.3,1)}.reveal.in{opacity:1;transform:none}.reveal.left{transform:translateX(-70px)}.reveal.right{transform:translateX(70px)}.reveal.left.in,.reveal.right.in{transform:none}
+.card{margin-top:34px;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);border:1px solid rgba(24,56,45,.12);border-radius:30px;padding:28px;box-shadow:0 30px 90px rgba(24,56,45,.13);text-align:left}.travel-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}.travel-card{background:rgba(255,255,255,.86);border:1px solid rgba(24,56,45,.12);border-radius:24px;padding:22px;box-shadow:0 18px 55px rgba(24,56,45,.09)}.travel-card h3{font-family:Cormorant Garamond,serif;font-size:31px;line-height:1;margin:0 0 10px;color:var(--green)}.travel-card p,.travel-card li{color:var(--muted);line-height:1.7;font-size:14px}.travel-card ul{padding-left:18px;margin:10px 0}.travel-card a{display:inline-block;margin-top:10px;color:var(--green);font-weight:600;text-decoration:none;border-bottom:1px solid rgba(24,56,45,.35)}.pill-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.pill{border:1px solid rgba(24,56,45,.14);background:#fffaf3;border-radius:999px;padding:10px 14px;color:var(--green);font-size:13px}.venue-address{font-family:Cormorant Garamond,serif;font-size:28px;color:var(--green);line-height:1.15;margin:18px 0}
+.gallery{padding:110px 0;background:#050605}.gallery-head{text-align:center;padding:0 20px 48px}.track{display:flex;gap:18px;overflow-x:auto;padding:0 6vw 20px;scroll-snap-type:x mandatory;scrollbar-width:none}.track::-webkit-scrollbar{display:none}.tile{flex:0 0 min(78vw,520px);height:560px;border-radius:28px;overflow:hidden;scroll-snap-align:center;background:#222}.tile.wide{flex-basis:min(86vw,760px)}.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:.8s}.tile:hover img{transform:scale(1.04)}
+.rsvp{background:linear-gradient(180deg,var(--cream),#efe5d4);color:var(--ink);padding:120px 20px}.rsvp-inner{max-width:740px;margin:auto;text-align:center}.rsvp h2{font-family:Cormorant Garamond,serif;font-size:clamp(48px,7vw,86px);font-weight:300;line-height:1;margin:0 0 16px;color:var(--green)}.inputrow{display:flex;gap:10px}input[type=text]{width:100%;border:1px solid #ddd2c1;border-radius:16px;padding:16px 18px;background:#fffaf3;outline:none;text-transform:uppercase;letter-spacing:.09em}button{border:0;border-radius:16px;padding:16px 22px;background:var(--green);color:#fff;cursor:pointer;font-weight:600;letter-spacing:.08em;text-transform:uppercase}.hint{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}.err{display:none;color:#a33;margin-top:12px;text-align:center}.err.show{display:block}#panel{display:none;margin-top:22px}#panel.show{display:block}.welcome{font-family:Cormorant Garamond,serif;font-size:34px;color:var(--green);margin:10px 0}.eventbox{background:var(--green2);color:#fff;border-radius:24px;padding:24px;margin:18px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.mini{padding:16px;border-radius:18px;background:rgba(255,255,255,.08)}.mini b{display:block;color:var(--gold);font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:6px}.guest{padding:18px;border-radius:22px;background:#fff;border:1px solid #eee1d3;margin:12px 0}.guest h4{font-family:Cormorant Garamond,serif;font-size:25px;color:var(--green);margin:0 0 12px}.meals{display:flex;gap:10px}.meals label{flex:1;text-align:center;border:1px solid #ddd2c1;border-radius:14px;padding:12px;cursor:pointer}.meals input{display:none}.meals input:checked+span{background:var(--green);color:#fff;border-radius:10px}.meals span{display:block;padding:8px}.indian{display:none;background:#fff8e8;border:1px solid rgba(200,162,74,.35);border-radius:24px;padding:22px;margin-top:14px;color:#6d541d}.indian.show{display:block}.save{width:100%;margin-top:14px;background:var(--gold)}.saved{display:none;text-align:center;color:#2f7b52;margin-top:10px}.saved.show{display:block}footer{background:#050605;text-align:center;padding:70px 20px;color:rgba(255,255,255,.55)}footer div{font-family:Cormorant Garamond,serif;font-size:35px;color:#fff}
+@media(max-width:760px){.links{display:none}.hero{min-height:650px}.split{grid-template-columns:1fr}.split-img{height:70vh}.grid,.inputrow,.travel-grid{grid-template-columns:1fr;display:grid}.tile{height:430px}.travel-card{padding:18px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* LOCAL VERBIAGE EDITOR */
+.editor-toolbar{position:fixed;right:18px;bottom:18px;z-index:99999;background:rgba(9,36,28,.94);color:#fff;border:1px solid rgba(255,255,255,.18);box-shadow:0 24px 70px rgba(0,0,0,.35);border-radius:18px;padding:14px;display:none;gap:10px;align-items:center;backdrop-filter:blur(18px);font-family:Inter,system-ui,sans-serif}
+body.edit-mode .editor-toolbar{display:flex}
+.editor-toolbar button{border:0;border-radius:12px;padding:12px 14px;background:#c8a24a;color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.editor-toolbar .secondary{background:rgba(255,255,255,.12)}
+.editor-toolbar span{font-size:12px;color:rgba(255,255,255,.72);max-width:240px;line-height:1.35}
+body.edit-mode [data-editable="true"]{outline:1.5px dashed rgba(200,162,74,.85);outline-offset:5px;cursor:text;border-radius:6px}
+body.edit-mode [data-editable="true"]:focus{outline:2px solid #c8a24a;background:rgba(200,162,74,.10)}
+body.edit-mode .nav{z-index:99998}
+.editor-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:100000;background:#18382d;color:#fff;padding:12px 18px;border-radius:999px;box-shadow:0 18px 55px rgba(0,0,0,.25);display:none}
+.editor-toast.show{display:block}
+
+
+
+/* PASSWORD GATE FINAL LAYOUT */
+html.locked, body.locked{height:100%;overflow:hidden;}
+body.locked .hero{height:100svh;min-height:720px;place-items:stretch;}
+body.locked .hero img{inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:saturate(.98) contrast(1.03);transform:none!important;}
+body.locked .shade{background:linear-gradient(to bottom,rgba(4,15,13,.42) 0%,rgba(4,15,13,.10) 15%,rgba(0,0,0,0) 38%,rgba(0,0,0,.06) 62%,rgba(0,0,0,.72) 100%);}
+body.locked .hero-copy{display:none;}
+body.locked .nav{top:14px;left:14px;right:14px;transform:none;width:auto;max-width:none;border-radius:24px;padding:16px 22px;background:rgba(9,22,20,.64);border:1px solid rgba(255,255,255,.16);box-shadow:0 18px 60px rgba(0,0,0,.18);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+body.locked .nav .brand{font-size:26px;white-space:nowrap;}
+.gate-meta{display:flex;align-items:center;gap:24px;justify-content:center;flex:1;margin:0 24px;color:rgba(255,255,255,.82);font-size:12px;letter-spacing:.24em;text-transform:uppercase;white-space:nowrap;}
+.gate-meta span:first-child{color:var(--gold);}
+.gate-meta i{display:block;width:1px;height:14px;background:rgba(200,162,74,.55);}
+body.locked .links a{color:#fff;opacity:.9;pointer-events:none;}
+body:not(.locked) .gate-meta{display:none;}
+.gate-box{position:absolute;z-index:6;left:50%;bottom:7.5vh;transform:translateX(-50%);width:min(720px,calc(100% - 44px));background:linear-gradient(180deg,rgba(22,27,24,.78),rgba(7,13,11,.82));border:1px solid rgba(255,255,255,.20);box-shadow:0 26px 90px rgba(0,0,0,.40);border-radius:24px;padding:22px 26px 18px;text-align:center;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);}
+.gate-box h2{font-family:Cormorant Garamond,serif;font-weight:300;font-size:31px;letter-spacing:.02em;margin:0 0 15px;color:rgba(255,255,255,.92);}
+.gate-inputrow{display:grid;grid-template-columns:1fr 156px;gap:14px;align-items:center;}
+.gate-inputrow input{height:58px;border:0;border-radius:17px;background:#fffaf3;color:#20201d;padding:0 22px;font-size:18px;letter-spacing:.16em;text-transform:uppercase;box-shadow:inset 0 0 0 1px rgba(0,0,0,.05);}
+.gate-inputrow button{height:58px;border-radius:17px;background:#174f3c;color:#fff;letter-spacing:.12em;font-size:16px;box-shadow:0 10px 30px rgba(0,0,0,.18);}
+.gate-inputrow button:hover{background:#1f654c;}
+.gate-hint{margin:14px 0 0;color:rgba(255,255,255,.78);font-size:14px;line-height:1.5;}
+.gate-error{display:none;margin-top:10px;color:#ffd0d0;font-size:14px;}
+.gate-error.show{display:block;}
+.unlock-cue{position:absolute;z-index:5;left:50%;bottom:1.8vh;transform:translateX(-50%);font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.46);}
+body:not(.locked) .gate-box, body:not(.locked) .unlock-cue{display:none;}
+@media(max-width:980px){.gate-meta{display:none;}body.locked .nav{justify-content:space-between}.gate-inputrow{grid-template-columns:1fr}.gate-inputrow button{width:100%;}.gate-box{bottom:5.5vh;padding:20px}.gate-box h2{font-size:28px}}
+@media(max-width:600px){body.locked .nav .brand{font-size:22px}.gate-box{width:calc(100% - 28px);bottom:4vh;border-radius:22px}.gate-inputrow input{font-size:14px;letter-spacing:.12em}.gate-hint{font-size:12px}}
+
+</style>
+</head>
+<body class="locked">
+<nav class="nav gate-nav" id="nav"><a class="brand" href="#">Nik &amp; Julianna</a><div class="gate-meta"><span>June 12, 2027</span><i></i><span>Leesburg, Virginia</span><i></i><span>Faith Like A Mustard Seed Farm</span></div><div class="links"><a href="#story">Story</a><a href="#venue">Venue</a><a href="#accommodations">Accommodations</a><a href="#gallery">Gallery</a><a href="#rsvp">RSVP</a></div></nav>
+<section class="hero"><img id="heroImg" src="images/photo1.jpg" alt="Nik and Julianna" style="--py: 0px; --scale: 1;"><div class="shade"></div><div class="hero-copy"><h1 class="fade-in d1">Nik <em>&amp;</em> Julianna</h1><div class="hero-event-date fade-in d2">June 12, 2027</div><div class="hero-location-block fade-in d3"><div class="hero-venue-name">Faith Like A Mustard Seed Farm</div><div class="hero-venue-location">Leesburg, Virginia</div></div></div><div class="gate-box" id="gateBox"><h2>Enter Invitation Code</h2><div class="gate-inputrow"><input id="gateCode" type="text" placeholder="Enter invitation passcode"><button onclick="unlockFromGate()">Unlock</button></div><p class="gate-hint">Enter the passcode from your invitation to unlock the wedding site and RSVP details.</p><div class="gate-error" id="gateErr">That passcode was not found.</div></div><div class="unlock-cue">Unlock to continue</div></section>
+<section class="apple-section dark" id="story"><div class="reveal"><span class="eyebrow">Our Wedding</span><h2 class="bigline">A celebration with the people we love most.</h2><p class="body">We cannot wait to tie the knot June 12, 2027!</p></div></section>
+<div class="sticky-wrap"><section class="sticky"><img id="stickyPhoto" src="images/photo2.jpg" alt="Engagement photo" style="--s: 1.16; --y: -50px;"><div class="sticky-card reveal"><span class="eyebrow">The Weekend</span><h2 class="bigline">Good food, family, friends, and an unforgettable night.</h2></div></section></div>
+<section class="split"><div class="split-img reveal left"><img src="images/photo3.jpg" alt="Engagement photo"></div><div class="split-text reveal right"><span class="eyebrow">The Day</span><h2>Saturday, June 12</h2><p>Use your invitation passcode to unlock your party, meal choices, and other details regarding our weekend of celebration.</p></div></section>
+<section class="apple-section cream" id="venue"><div class="reveal" style="max-width:980px;width:100%"><span class="eyebrow">Venue</span><h2 class="bigline" style="color:var(--green)">Faith Like A Mustard Seed Farm</h2><p class="body">Our wedding will be held at a countryside farm venue in Loudoun County, Virginia.</p><div class="card"><div class="venue-address">42906 Lucketts Road<br>Leesburg, VA 20176</div><p style="color:var(--muted);line-height:1.8">The venue is located north of downtown Leesburg. Please allow extra time for country-road traffic.</p><div class="pill-row"><span class="pill">Countryside venue</span><span class="pill">Leesburg, VA</span><span class="pill">Outdoor + barn setting</span></div><p><a href="https://www.google.com/maps/search/?api=1&amp;query=42906+Lucketts+Road+Leesburg+VA+20176" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">Open venue in Google Maps</a></p></div></div></section>
+<section class="apple-section cream" id="accommodations"><div class="reveal" style="max-width:1050px;width:100%"><span class="eyebrow">Travel</span><h2 class="bigline" style="color:var(--green)">Accommodations</h2><p class="body">For guests using Hilton Honors or Marriott Bonvoy points, we recommend looking in Leesburg, Ashburn, and One Loudoun. These areas keep you within roughly 30 minutes of the venue while still being close to restaurants, coffee, and stores.</p><div class="travel-grid"><div class="travel-card"><h3>Hilton Options</h3><ul><li>Hampton Inn &amp; Suites Leesburg</li><li>Homewood Suites by Hilton Leesburg</li><li>Embassy Suites by Hilton Dulles North Loudoun</li></ul><p>Leesburg is closest to the venue. Ashburn and One Loudoun offer more restaurants and nightlife.</p></div><div class="travel-card"><h3>Marriott Options</h3><ul><li>SpringHill Suites Ashburn Dulles North</li><li>Fairfield Inn &amp; Suites Dulles Airport area</li><li>Courtyard or Residence Inn options around Ashburn / Dulles</li></ul><p>Good for guests flying into Dulles or who want to stay near One Loudoun.</p></div><div class="travel-card"><h3>Recommended Area</h3><p><strong>One Loudoun / Ashburn</strong> is the easiest area for most guests because it has restaurants, bars, coffee, shopping, and better rideshare availability.</p></div><div class="travel-card"><h3>Airport Notes</h3><ul><li>Dulles International Airport is the most convenient airport.</li><li>Reagan National and BWI are farther away and may require more travel time.</li></ul></div></div></div></section>
+<section class="gallery" id="gallery"><div class="gallery-head reveal"><span class="eyebrow">Gallery</span><h2 class="bigline">A Few Of Our Favorite Pictures</h2></div><div class="track"><div class="tile"><img src="images/photo4.jpg" alt="Engagement photo"></div><div class="tile wide"><img src="images/photo5.jpg" alt="Engagement photo"></div><div class="tile"><img src="images/photo6.jpg" alt="Engagement photo"></div><div class="tile wide"><img src="images/photo7.jpg" alt="Engagement photo"></div></div><p class="hint">Swipe or scroll sideways</p></section>
+<section class="rsvp" id="rsvp"><div class="rsvp-inner reveal"><span class="eyebrow">RSVP For Our Wedding</span><h2>Open Your Invite</h2><p class="body" style="color:var(--muted)">Enter the key from your invitation to RSVP for every guest in your party.</p><div class="card"><div class="inputrow"><input id="code" type="text" placeholder="Enter passcode"><button onclick="unlock()">Unlock</button></div><div class="hint">Enter Pass Code Provided in your invite card!</div><div class="err" id="err">That passcode was not found.</div><div id="panel"></div></div></div></section>
+<footer><div>Nik &amp; Julianna</div><p>June 12, 2027 • Leesburg, Virginia</p></footer>
+<script>
+const API_URL = "https://script.google.com/macros/s/AKfycbyGrIixtUPG1UMU3vjNbqrz2ydN9SznH3CP-vXAUXf8nqJGDkTQaZsLlmyZUogmFq93Mg/exec";
+let currentInvite = null;
+const nav = document.getElementById('nav');
+const hero = document.getElementById('heroImg');
+const stickyPhoto = document.getElementById('stickyPhoto');
+function onScroll(){const y=window.scrollY||0;if(nav)nav.classList.toggle('scrolled',y>40);if(hero){hero.style.setProperty('--py',Math.min(y*.18,90)+'px');hero.style.setProperty('--scale',1+Math.min(y*.00012,.06));}if(stickyPhoto){const wrap=stickyPhoto.closest('.sticky-wrap');if(wrap){const r=wrap.getBoundingClientRect();const p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));stickyPhoto.style.setProperty('--s',1+p*.16);stickyPhoto.style.setProperty('--y',(-p*50)+'px');}}}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.16});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+function validApi(){return API_URL.startsWith('https://script.google.com/macros/s/')&&API_URL.endsWith('/exec');}
+function esc(s){return String(s ?? '').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+async function lookupInvite(raw, ui){
+  const err = ui === 'gate' ? document.getElementById('gateErr') : document.getElementById('err');
+  const panel = document.getElementById('panel');
+  if(err) err.classList.remove('show');
+  if(ui !== 'gate'){
+    panel.classList.add('show');
+    panel.innerHTML='<p class="hint">Checking invite...</p>';
+  }
+  if(!validApi()){
+    const msg='The RSVP backend is not connected yet. Paste your deployed Apps Script Web App URL into API_URL.';
+    if(ui !== 'gate') panel.innerHTML='';
+    if(err){err.textContent=msg;err.classList.add('show');}
+    return;
+  }
+  try{
+    const res=await fetch(API_URL,{method:'POST',body:JSON.stringify({action:'lookup',code:raw})});
+    const inv=await res.json();
+    if(!inv.success){
+      if(err){err.textContent=inv.message||'That passcode was not found.';err.classList.add('show');}
+      if(ui !== 'gate') panel.classList.remove('show');
+      return;
+    }
+    currentInvite=inv;
+    sessionStorage.setItem('weddingUnlocked','1');
+    sessionStorage.setItem('weddingCode', raw);
+    document.documentElement.classList.remove('locked');
+    document.body.classList.remove('locked');
+    const rsvpCode=document.getElementById('code');
+    if(rsvpCode) rsvpCode.value=raw;
+    renderInvite(inv);
+    if(ui === 'gate') window.scrollTo({top:0,behavior:'smooth'});
+  }catch(e){
+    const msg='Could not connect to RSVP backend. Check your Apps Script deployment.';
+    if(err){err.textContent=msg;err.classList.add('show');}
+    if(ui !== 'gate') panel.classList.remove('show');
+  }
+}
+function unlock(){
+  const raw=document.getElementById('code').value.trim().toUpperCase();
+  lookupInvite(raw,'rsvp');
+}
+function unlockFromGate(){
+  const raw=document.getElementById('gateCode').value.trim().toUpperCase();
+  lookupInvite(raw,'gate');
+}
+document.addEventListener('keydown',e=>{
+  if(e.key==='Enter' && document.activeElement && document.activeElement.id==='gateCode') unlockFromGate();
+});
+function renderInvite(inv){const panel=document.getElementById('panel');panel.innerHTML=`<div class="welcome">Welcome, ${esc(inv.party)}</div><p class="hint">Seats reserved: ${inv.guests.length}</p><div class="eventbox"><div class="grid"><div class="mini"><b>Date</b>June 12, 2027</div><div class="mini"><b>Meal choices</b>Vegetarian or Chicken</div><div class="mini"><b>Venue</b>Faith Like A Mustard Seed Farm</div><div class="mini"><b>Invite</b>${inv.guests.length} guest${inv.guests.length>1?'s':''}</div></div></div>${inv.guests.map((g,i)=>`<div class="guest"><h4>${esc(g)}</h4><p class="hint">Attending?</p><div class="meals"><label><input type="radio" name="attending_${i}" value="Yes"><span>Yes</span></label><label><input type="radio" name="attending_${i}" value="No"><span>No</span></label></div><p class="hint">Meal choice</p><div class="meals"><label><input type="radio" name="meal_${i}" value="Vegetarian"><span>Vegetarian</span></label><label><input type="radio" name="meal_${i}" value="Chicken"><span>Chicken</span></label></div></div>`).join('')}<div class="indian ${inv.indianEvent?'show':''}"><h3>Secondary Indian Celebration</h3><p>This invite includes access to the Indian celebration details. More details will be shared here as we get closer.</p></div><button class="save" onclick="saveRsvp()">Save RSVP</button><div class="saved" id="saved">RSVP saved.</div>`;}
+async function saveRsvp(){if(!currentInvite)return;const responses=currentInvite.guests.map((g,i)=>({guest:g,attending:document.querySelector(`input[name="attending_${i}"]:checked`)?.value||'',meal:document.querySelector(`input[name="meal_${i}"]:checked`)?.value||'',indianEventRSVP:currentInvite.indianEvent?'Invited':'Not Invited'}));await fetch(API_URL,{method:'POST',body:JSON.stringify({action:'submit',code:currentInvite.code,party:currentInvite.party,responses})});document.getElementById('saved').classList.add('show');}
+</script>
+
+
+
+
+
+</body></html>

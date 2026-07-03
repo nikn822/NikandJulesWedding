@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class=""><head>
+<html lang="en" class="locked"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nik &amp; Julianna | June 12–13, 2027</title>
@@ -10,7 +10,7 @@
 :root{--green:#18382d;--green2:#09241c;--cream:#fbf6ed;--gold:#c8a24a;--blue:#9eb4c8;--ink:#141414;--muted:#7b766c;--blur:blur(24px)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#050605;color:#fff;font-family:Inter,system-ui,sans-serif;overflow-x:hidden}a{color:inherit}button,input,select{font:inherit}
 .nav{position:fixed;z-index:20;top:16px;left:50%;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border:1px solid rgba(255,255,255,.12);background:rgba(12,18,16,.28);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);border-radius:999px;transition:.35s}.nav.scrolled{background:rgba(12,18,16,.78);box-shadow:0 20px 60px rgba(0,0,0,.25)}.brand{font-family:Cormorant Garamond,serif;font-size:22px;letter-spacing:.04em;text-decoration:none}.links{display:flex;gap:18px}.links a{font-size:12px;text-decoration:none;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.72)}
-.hero{height:100svh;min-height:720px;position:relative;display:grid;place-items:end center;overflow:hidden;background:#000}.hero img{position:absolute;inset:-8% 0 0;width:100%;height:116%;object-fit:cover;filter:saturate(.95) contrast(1.05);transform:translate3d(0,var(--py,0),0) scale(var(--scale,1));will-change:transform}.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.02) 40%,rgba(0,0,0,.75) 86%,#050605)}.hero-copy{position:relative;text-align:center;padding:0 22px 12vh;max-width:980px}.eyebrow{display:block;color:var(--gold);font-size:12px;letter-spacing:.42em;text-transform:uppercase;margin-bottom:18px}h1{font-family:Cormorant Garamond,serif;font-weight:300;font-size:clamp(64px,13vw,152px);line-height:.86;margin:0;letter-spacing:-.04em}h1 em{color:rgba(255,255,255,.58);font-style:italic}.date{margin-top:24px;display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;color:rgba(255,255,255,.72);font-size:13px;letter-spacing:.22em;text-transform:uppercase}.rule{width:54px;height:1px;background:rgba(200,162,74,.6)}
+.hero{height:100svh;min-height:720px;position:relative;display:grid;place-items:end center;overflow:hidden;background:#000}.hero img{position:absolute;inset:-8% 0 0;width:100%;height:116%;object-fit:cover;filter:saturate(.95) contrast(1.05);transform:translate3d(0,var(--py,0),0) scale(var(--scale,1));will-change:transform}.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.02) 40%,rgba(0,0,0,.75) 86%,#050605)}.hero-copy{position:relative;text-align:center;padding:10vh 22px 12vh;max-width:980px}.eyebrow{display:block;color:var(--gold);font-size:12px;letter-spacing:.42em;text-transform:uppercase;margin-bottom:18px}h1{font-family:Cormorant Garamond,serif;font-weight:300;font-size:clamp(64px,11vw,138px);line-height:.92;margin:0;letter-spacing:-.03em}h1 em{color:rgba(255,255,255,.58);font-style:italic}.date{margin-top:24px;display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap;color:rgba(255,255,255,.72);font-size:13px;letter-spacing:.22em;text-transform:uppercase}.rule{width:54px;height:1px;background:rgba(200,162,74,.6)}
 .fade-in{opacity:0;transform:translateY(34px);animation:up .9s cubic-bezier(.16,1,.3,1) forwards}.d1{animation-delay:.18s}.d2{animation-delay:.36s}.d3{animation-delay:.58s}@keyframes up{to{opacity:1;transform:none}}
 .apple-section{min-height:100svh;position:relative;display:grid;place-items:center;overflow:hidden;padding:110px 22px}.dark{background:#050605}.cream{background:var(--cream);color:var(--ink)}.forest{background:radial-gradient(circle at 30% 0%,#315f4b,var(--green2) 64%)}.bigline{font-family:Cormorant Garamond,serif;font-size:clamp(42px,7vw,92px);font-weight:300;line-height:1.02;max-width:980px;text-align:center;margin:0}.bigline em{color:var(--blue)}.body{font-size:17px;line-height:1.9;color:rgba(255,255,255,.58);max-width:640px;text-align:center;margin:28px auto 0}.cream .body{color:var(--muted)}
 .sticky-wrap{height:240vh;background:#000;position:relative}.sticky{position:sticky;top:0;height:100svh;display:grid;place-items:center;overflow:hidden}.sticky img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:var(--op,.9);transform:scale(var(--s,1)) translateY(var(--y,0));filter:brightness(.72)}.sticky-card{position:relative;text-align:center;width:min(880px,90vw);padding:46px 28px;border:1px solid rgba(255,255,255,.14);border-radius:30px;background:rgba(0,0,0,.22);backdrop-filter:blur(20px)}
@@ -75,14 +75,14 @@ body.locked .gate-meta, body.locked .links{display:none!important;}
 body.locked .nav{justify-content:flex-start;}
 body.locked .nav .brand{margin:auto;}
 body.locked .hero-copy{display:none!important;}
-.hero-date-clean{margin-top:18px;color:var(--gold);font-size:18px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;}
-.hero-venue-clean{margin-top:18px;color:rgba(255,255,255,.88);font-size:15px;letter-spacing:.25em;text-transform:uppercase;font-weight:500;}
-.hero-location-clean{margin-top:8px;color:rgba(255,255,255,.66);font-size:13px;letter-spacing:.28em;text-transform:uppercase;}
-body:not(.locked) .hero-copy{padding-bottom:12vh;}
+.hero-date-clean{margin-top:42px;color:var(--gold);font-size:20px;letter-spacing:.38em;text-transform:uppercase;font-weight:600;}
+.hero-venue-clean{margin-top:26px;color:#ffffff;font-size:18px;letter-spacing:.30em;text-transform:uppercase;font-weight:500;opacity:.95;}
+.hero-location-clean{margin-top:18px;color:rgba(255,255,255,.70);font-size:15px;letter-spacing:.22em;text-transform:uppercase;font-weight:400;}
+body:not(.locked) .hero-copy{padding:10vh 22px 12vh;}
 body:not(.locked) .nav .brand{margin:0;}
 body:not(.locked) .links{display:flex;}
 body:not(.locked) .gate-meta{display:none!important;}
-@media(max-width:760px){.hero-date-clean{font-size:14px}.hero-venue-clean{font-size:12px}.hero-location-clean{font-size:11px}}
+@media(max-width:760px){.hero-date-clean{font-size:14px;margin-top:30px;letter-spacing:.26em}.hero-venue-clean{font-size:12px;margin-top:20px;letter-spacing:.22em}.hero-location-clean{font-size:11px;margin-top:14px;letter-spacing:.18em}h1{font-size:clamp(56px,18vw,92px)}}
 
 </style>
 
@@ -171,10 +171,59 @@ body.edit-mode img{
 }
 </style>
 
+
+<style id="gallery-alignment-fix">
+
+/* GALLERY ALIGNMENT FIX */
+.gallery{
+  padding:130px 0 110px;
+  background:#050605;
+  overflow:hidden;
+}
+.gallery-head{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 48px 64px;
+  text-align:center;
+}
+.gallery-head .eyebrow{
+  display:block;
+  text-align:center;
+  margin:0 auto 26px;
+}
+.gallery-head .bigline{
+  max-width:920px;
+  margin:0 auto;
+  text-align:center;
+  line-height:.98;
+  letter-spacing:-.035em;
+}
+.track{
+  max-width:1440px;
+  margin:0 auto;
+  display:flex;
+  gap:18px;
+  overflow-x:auto;
+  padding:0 48px 20px;
+  scroll-snap-type:x mandatory;
+  scrollbar-width:none;
+}
+.gallery .hint{
+  text-align:center;
+  margin-top:18px;
+}
+@media(max-width:760px){
+  .gallery{padding:90px 0 80px;}
+  .gallery-head{padding:0 24px 42px;}
+  .gallery-head .bigline{font-size:clamp(46px,15vw,72px);}
+  .track{padding:0 20px 20px;}
+}
+
+</style>
 </head>
-<body class="">
-<nav class="nav gate-nav scrolled" id="nav"><a class="brand" href="#">Nik &amp; Julianna</a><div class="gate-meta"></div><div class="links"><a href="#story">Story</a><a href="#registry">Registry</a><a href="#accommodations">Accommodations</a><a href="#gallery">Gallery</a></div></nav>
-<section class="hero"><img id="heroImg" src="images/photo1.jpg" alt="Nik and Julianna" style="--py: 90px; --scale: 1.06;"><div class="shade"></div><div class="hero-copy"><h1 class="fade-in d2" spellcheck="true">Nik <em>&amp;</em> Julianna</h1><div class="hero-date-clean fade-in d3" id="heroDateLabel" spellcheck="true"><div><br></div>June 12–13, 2027</div><div class="hero-venue-clean fade-in d3" id="heroVenueLabel" spellcheck="true">Wedding Weekend</div><div class="hero-location-clean fade-in d3" id="heroLocationLabel" spellcheck="true">Loudoun County, Virginia</div></div><div class="gate-box" id="gateBox"><h2 spellcheck="true">Enter Your Name</h2><div class="gate-inputrow"><input id="gateCode" type="text" placeholder="Enter your name"><button onclick="unlockFromGate()">Open</button></div><p class="gate-hint" spellcheck="true">Enter any guest name listed on your save-the-date invitation to open the wedding details.</p><div class="gate-error" id="gateErr">That name was not found on the invite list.</div></div><div class="unlock-cue">Enter name to continue</div></section>
+<body class="locked">
+<nav class="nav gate-nav scrolled" id="nav"><a class="brand" href="#">Nik &amp; Julianna</a><div class="gate-meta"></div><div class="links"><a href="#events">Events</a><a href="#story">Story</a><a href="#accommodations">Accommodations</a><a href="#gallery">Gallery</a><a href="#registry">Registry</a></div></nav>
+<section class="hero"><img id="heroImg" src="images/photo1.jpg" alt="Nik and Julianna" style="--py: 90px; --scale: 1.06;"><div class="shade"></div><div class="hero-copy"><h1 class="fade-in d2" spellcheck="true">Nik <em>&amp;</em> Julianna</h1><div class="hero-date-clean fade-in d3" id="heroDateLabel" spellcheck="true">June 12–13, 2027</div><div class="hero-venue-clean fade-in d3" id="heroVenueLabel" spellcheck="true">Wedding Weekend</div><div class="hero-location-clean fade-in d3" id="heroLocationLabel" spellcheck="true">Loudoun County, Virginia</div></div><div class="gate-box" id="gateBox"><h2 spellcheck="true">Enter Your Name</h2><div class="gate-inputrow"><input id="gateCode" type="text" placeholder="Enter your name"><button onclick="unlockFromGate()">Open</button></div><p class="gate-hint" spellcheck="true">Enter any guest name listed on your save-the-date invitation to open the wedding details.</p><div class="gate-error" id="gateErr">That name was not found on the invite list.</div></div><div class="unlock-cue">Enter name to continue</div></section>
 <section class="apple-section cream" id="events">
   <div class="reveal in" style="max-width:1050px;width:100%">
     <span class="eyebrow" spellcheck="true">Save the Date</span>
@@ -196,9 +245,10 @@ body.edit-mode img{
 </section>
 <section class="apple-section dark" id="story"><div class="reveal in"><span class="eyebrow" spellcheck="true">Our Wedding</span><h2 class="bigline" spellcheck="true">A celebration with the people we love most.</h2><p class="body" spellcheck="true">We cannot wait to tie the knot June 12, 2027!</p></div></section>
 
-<section class="apple-section cream" id="registry"><div class="reveal in" style="max-width:1050px;width:100%"><span class="eyebrow" spellcheck="true">Registry</span><h2 class="bigline" style="color:var(--green)" spellcheck="true">Registry</h2><p class="body" spellcheck="true">Your presence at our wedding is the greatest gift. If you would like to celebrate with a gift, we have linked our registries below.</p><div class="registry-grid"><div class="registry-card"><h3 spellcheck="true">Wedding Registry</h3><p spellcheck="true">View our main registry and gift list.</p><a href="https://www.zola.com/" target="_blank" rel="noopener">Open Registry</a></div><div class="registry-card"><h3 spellcheck="true">Amazon</h3><p spellcheck="true">Household favorites, everyday items, and newlywed essentials.</p><a href="https://www.amazon.com/wedding/" target="_blank" rel="noopener">Open Amazon</a></div><div class="registry-card"><h3 spellcheck="true">Target</h3><p spellcheck="true">Home, kitchen, and hosting items for our next chapter.</p><a href="https://www.target.com/gift-registry/" target="_blank" rel="noopener">Open Target</a></div></div><p class="registry-note" spellcheck="true">We will update these links as our registry is finalized.</p></div></section>
+
 <section class="apple-section cream" id="accommodations"><div class="reveal in" style="max-width:1050px;width:100%"><span class="eyebrow" spellcheck="true">Travel</span><h2 class="bigline" style="color:var(--green)" spellcheck="true">Accommodations</h2><p class="body" spellcheck="true">For guests using Hilton Honors or Marriott Bonvoy points, we recommend looking in Leesburg, Ashburn, and One Loudoun. These areas keep you within roughly 30 minutes of the venue while still being close to restaurants, coffee, and stores.</p><div class="travel-grid"><div class="travel-card"><h3 spellcheck="true">Hilton Options</h3><ul><li spellcheck="true">Hampton Inn &amp; Suites Leesburg</li><li spellcheck="true">Homewood Suites by Hilton Leesburg</li><li spellcheck="true">Embassy Suites by Hilton Dulles North Loudoun</li></ul><p spellcheck="true">Leesburg is closest to the venue. Ashburn and One Loudoun offer more restaurants and nightlife.</p></div><div class="travel-card"><h3 spellcheck="true">Marriott Options</h3><ul><li spellcheck="true">SpringHill Suites Ashburn Dulles North</li><li spellcheck="true">Fairfield Inn &amp; Suites Dulles Airport area</li><li spellcheck="true">Courtyard or Residence Inn options around Ashburn / Dulles</li></ul><p spellcheck="true">Good for guests flying into Dulles or who want to stay near One Loudoun.</p></div><div class="travel-card"><h3 spellcheck="true">Recommended Area</h3><p spellcheck="true"><strong>One Loudoun / Ashburn</strong> is the easiest area for most guests because it has restaurants, bars, coffee, shopping, and better rideshare availability.</p></div><div class="travel-card"><h3 spellcheck="true">Airport Notes</h3><ul><li spellcheck="true">Dulles International Airport is the most convenient airport.</li><li spellcheck="true">Reagan National and BWI are farther away and may require more travel time.</li></ul></div></div></div></section>
 <section class="gallery" id="gallery"><div class="gallery-head reveal in"><span class="eyebrow" spellcheck="true">Gallery</span><h2 class="bigline" spellcheck="true">A Few Of Our Favorite Pictures</h2></div><div class="track"><div class="tile"><img src="images/photo4.jpg" alt="Engagement photo"></div><div class="tile wide"><img src="images/photo5.jpg" alt="Engagement photo"></div><div class="tile"><img src="images/photo6.jpg" alt="Engagement photo"></div><div class="tile wide"><img src="images/photo7.jpg" alt="Engagement photo"></div></div><p class="hint" spellcheck="true">Swipe or scroll sideways</p></section>
+<section class="apple-section cream" id="registry"><div class="reveal in" style="max-width:1050px;width:100%"><span class="eyebrow" spellcheck="true">Registry</span><h2 class="bigline" style="color:var(--green)" spellcheck="true">Registry</h2><p class="body" spellcheck="true">Your presence at our wedding is the greatest gift. If you would like to celebrate with a gift, we have linked our registries below.</p><div class="registry-grid"><div class="registry-card"><h3 spellcheck="true">Wedding Registry</h3><p spellcheck="true">View our main registry and gift list.</p><a href="https://www.zola.com/" target="_blank" rel="noopener">Open Registry</a></div><div class="registry-card"><h3 spellcheck="true">Amazon</h3><p spellcheck="true">Household favorites, everyday items, and newlywed essentials.</p><a href="https://www.amazon.com/wedding/" target="_blank" rel="noopener">Open Amazon</a></div><div class="registry-card"><h3 spellcheck="true">Target</h3><p spellcheck="true">Home, kitchen, and hosting items for our next chapter.</p><a href="https://www.target.com/gift-registry/" target="_blank" rel="noopener">Open Target</a></div></div><p class="registry-note" spellcheck="true">We will update these links as our registry is finalized.</p></div></section>
 <footer><div spellcheck="true">Nik &amp; Julianna</div><p spellcheck="true">June 12–13, 2027 • Loudoun County, Virginia</p></footer>
 <script>
 const API_URL = "https://script.google.com/macros/s/AKfycbyqCHAnk3DeWDa9eFhbmK9FAkIyLJZZjSSQOMHkLnXRT_nUN9vcGKFnQtLR7MeOk_WJLg/exec";

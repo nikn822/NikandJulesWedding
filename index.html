@@ -2,7 +2,7 @@
 <html lang="en" class="locked"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nik &amp; Julianna | June 12, 2027</title>
+<title>Nik &amp; Julianna</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
@@ -62,25 +62,51 @@ body:not(.locked) .gate-box, body:not(.locked) .unlock-cue{display:none;}
 @media(max-width:980px){.gate-meta{display:none;}body.locked .nav{justify-content:space-between}.gate-inputrow{grid-template-columns:1fr}.gate-inputrow button{width:100%;}.gate-box{bottom:5.5vh;padding:20px}.gate-box h2{font-size:28px}}
 @media(max-width:600px){body.locked .nav .brand{font-size:22px}.gate-box{width:calc(100% - 28px);bottom:4vh;border-radius:22px}.gate-inputrow input{font-size:14px;letter-spacing:.12em}.gate-hint{font-size:12px}}
 
-/* LOCKED NAV PRIVACY CLEANUP */
-body.locked .links{display:none;}
-body.locked .gate-meta{display:flex;justify-content:flex-end;flex:0;margin-left:auto;margin-right:0;}
-body.locked .gate-meta i{display:none;}
-body.locked .gate-meta span{color:rgba(255,255,255,.74);}
-body:not(.locked) .nav{top:16px;left:50%;right:auto;transform:translateX(-50%);width:min(1120px,calc(100% - 28px));}
+
+/* SAVE-THE-DATE NAME GATE OVERRIDES */
+body.locked .gate-meta, body.locked .links{display:none!important;}
+body.locked .nav{justify-content:flex-start;}
+body.locked .nav .brand{margin:auto;}
+body.locked .hero-copy{display:none!important;}
+.hero-date-clean{margin-top:18px;color:var(--gold);font-size:18px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;}
+.hero-venue-clean{margin-top:18px;color:rgba(255,255,255,.88);font-size:15px;letter-spacing:.25em;text-transform:uppercase;font-weight:500;}
+.hero-location-clean{margin-top:8px;color:rgba(255,255,255,.66);font-size:13px;letter-spacing:.28em;text-transform:uppercase;}
+body:not(.locked) .hero-copy{padding-bottom:12vh;}
+body:not(.locked) .nav .brand{margin:0;}
+body:not(.locked) .links{display:flex;}
+body:not(.locked) .gate-meta{display:none!important;}
+@media(max-width:760px){.hero-date-clean{font-size:14px}.hero-venue-clean{font-size:12px}.hero-location-clean{font-size:11px}}
 
 </style>
 </head>
 <body class="locked">
-<nav class="nav gate-nav" id="nav"><a class="brand" href="#">Nik &amp; Julianna</a><div class="gate-meta"><span>June 12, 2027</span></div><div class="links"><a href="#story">Story</a><a href="#venue">Venue</a><a href="#accommodations">Accommodations</a><a href="#gallery">Gallery</a><a href="#rsvp">RSVP</a></div></nav>
-<section class="hero"><img id="heroImg" src="images/photo1.jpg" alt="Nik and Julianna" style="--py: 0px; --scale: 1;"><div class="shade"></div><div class="hero-copy"><span class="eyebrow fade-in d1">June 12, 2027</span><h1 class="fade-in d2">Nik <em>&amp;</em> Julianna</h1><div class="date fade-in d3"><span>Leesburg, Virginia</span><span class="rule"></span><span>Faith Like A Mustard Seed Farm</span></div></div><div class="gate-box" id="gateBox"><h2>Enter Invitation Code</h2><div class="gate-inputrow"><input id="gateCode" type="text" placeholder="Enter invitation passcode"><button onclick="unlockFromGate()">Unlock</button></div><p class="gate-hint">Enter the passcode from your invitation to unlock the wedding site and RSVP details.</p><div class="gate-error" id="gateErr">That passcode was not found.</div></div><div class="unlock-cue">Unlock to continue</div></section>
+<nav class="nav gate-nav" id="nav"><a class="brand" href="#">Nik &amp; Julianna</a><div class="gate-meta"></div><div class="links"><a href="#events">Events</a><a href="#story">Story</a><a href="#venue">Venue</a><a href="#accommodations">Accommodations</a><a href="#gallery">Gallery</a></div></nav>
+<section class="hero"><img id="heroImg" src="images/photo1.jpg" alt="Nik and Julianna" style="--py: 0px; --scale: 1;"><div class="shade"></div><div class="hero-copy"><h1 class="fade-in d2">Nik <em>&amp;</em> Julianna</h1><div class="hero-date-clean fade-in d3" id="heroDateLabel">June 12, 2027</div><div class="hero-venue-clean fade-in d3" id="heroVenueLabel">Faith Like A Mustard Seed Farm</div><div class="hero-location-clean fade-in d3" id="heroLocationLabel">Leesburg, Virginia</div></div><div class="gate-box" id="gateBox"><h2>Enter Your Name</h2><div class="gate-inputrow"><input id="gateCode" type="text" placeholder="Enter your name"><button onclick="unlockFromGate()">Open</button></div><p class="gate-hint">Enter any guest name listed on your save-the-date invitation to open the wedding details.</p><div class="gate-error" id="gateErr">That name was not found on the invite list.</div></div><div class="unlock-cue">Enter name to continue</div></section>
+<section class="apple-section cream" id="events">
+  <div class="reveal" style="max-width:1050px;width:100%">
+    <span class="eyebrow">Save the Date</span>
+    <h2 class="bigline" id="eventsHeadline" style="color:var(--green)">Wedding Celebration</h2>
+    <p class="body" id="eventsIntro">We are so excited to celebrate with you.</p>
+    <div class="travel-grid" id="eventCards">
+      <div class="travel-card">
+        <h3>Wedding Day</h3>
+        <p><strong>Saturday, June 12, 2027</strong></p>
+        <p>Faith Like A Mustard Seed Farm<br>42906 Lucketts Road<br>Leesburg, VA 20176</p>
+      </div>
+      <div class="travel-card" id="indianEventCard" style="display:none">
+        <h3>Indian Celebration</h3>
+        <p><strong>Sunday, June 13, 2027</strong></p>
+        <p>Loudoun County, Virginia<br>Additional details will be shared as we get closer.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="apple-section dark" id="story"><div class="reveal"><span class="eyebrow">Our Wedding</span><h2 class="bigline">A celebration with the people we love most.</h2><p class="body">We cannot wait to tie the knot June 12, 2027!</p></div></section>
 <div class="sticky-wrap"><section class="sticky"><img id="stickyPhoto" src="images/photo2.jpg" alt="Engagement photo" style="--s: 1.16; --y: -50px;"><div class="sticky-card reveal"><span class="eyebrow">The Weekend</span><h2 class="bigline">Good food, family, friends, and an unforgettable night.</h2></div></section></div>
 <section class="split"><div class="split-img reveal left"><img src="images/photo3.jpg" alt="Engagement photo"></div><div class="split-text reveal right"><span class="eyebrow">The Day</span><h2>Saturday, June 12</h2><p>Use your invitation passcode to unlock your party, meal choices, and other details regarding our weekend of celebration.</p></div></section>
 <section class="apple-section cream" id="venue"><div class="reveal" style="max-width:980px;width:100%"><span class="eyebrow">Venue</span><h2 class="bigline" style="color:var(--green)">Faith Like A Mustard Seed Farm</h2><p class="body">Our wedding will be held at a countryside farm venue in Loudoun County, Virginia.</p><div class="card"><div class="venue-address">42906 Lucketts Road<br>Leesburg, VA 20176</div><p style="color:var(--muted);line-height:1.8">The venue is located north of downtown Leesburg. Please allow extra time for country-road traffic.</p><div class="pill-row"><span class="pill">Countryside venue</span><span class="pill">Leesburg, VA</span><span class="pill">Outdoor + barn setting</span></div><p><a href="https://www.google.com/maps/search/?api=1&amp;query=42906+Lucketts+Road+Leesburg+VA+20176" target="_blank" rel="noopener" style="color:var(--green);font-weight:600">Open venue in Google Maps</a></p></div></div></section>
 <section class="apple-section cream" id="accommodations"><div class="reveal" style="max-width:1050px;width:100%"><span class="eyebrow">Travel</span><h2 class="bigline" style="color:var(--green)">Accommodations</h2><p class="body">For guests using Hilton Honors or Marriott Bonvoy points, we recommend looking in Leesburg, Ashburn, and One Loudoun. These areas keep you within roughly 30 minutes of the venue while still being close to restaurants, coffee, and stores.</p><div class="travel-grid"><div class="travel-card"><h3>Hilton Options</h3><ul><li>Hampton Inn &amp; Suites Leesburg</li><li>Homewood Suites by Hilton Leesburg</li><li>Embassy Suites by Hilton Dulles North Loudoun</li></ul><p>Leesburg is closest to the venue. Ashburn and One Loudoun offer more restaurants and nightlife.</p></div><div class="travel-card"><h3>Marriott Options</h3><ul><li>SpringHill Suites Ashburn Dulles North</li><li>Fairfield Inn &amp; Suites Dulles Airport area</li><li>Courtyard or Residence Inn options around Ashburn / Dulles</li></ul><p>Good for guests flying into Dulles or who want to stay near One Loudoun.</p></div><div class="travel-card"><h3>Recommended Area</h3><p><strong>One Loudoun / Ashburn</strong> is the easiest area for most guests because it has restaurants, bars, coffee, shopping, and better rideshare availability.</p></div><div class="travel-card"><h3>Airport Notes</h3><ul><li>Dulles International Airport is the most convenient airport.</li><li>Reagan National and BWI are farther away and may require more travel time.</li></ul></div></div></div></section>
 <section class="gallery" id="gallery"><div class="gallery-head reveal"><span class="eyebrow">Gallery</span><h2 class="bigline">A Few Of Our Favorite Pictures</h2></div><div class="track"><div class="tile"><img src="images/photo4.jpg" alt="Engagement photo"></div><div class="tile wide"><img src="images/photo5.jpg" alt="Engagement photo"></div><div class="tile"><img src="images/photo6.jpg" alt="Engagement photo"></div><div class="tile wide"><img src="images/photo7.jpg" alt="Engagement photo"></div></div><p class="hint">Swipe or scroll sideways</p></section>
-<section class="rsvp" id="rsvp"><div class="rsvp-inner reveal"><span class="eyebrow">RSVP For Our Wedding</span><h2>Open Your Invite</h2><p class="body" style="color:var(--muted)">Enter the key from your invitation to RSVP for every guest in your party.</p><div class="card"><div class="inputrow"><input id="code" type="text" placeholder="Enter passcode"><button onclick="unlock()">Unlock</button></div><div class="hint">Enter Pass Code Provided in your invite card!</div><div class="err" id="err">That passcode was not found.</div><div id="panel"></div></div></div></section>
 <footer><div>Nik &amp; Julianna</div><p>June 12, 2027 • Leesburg, Virginia</p></footer>
 <script>
 const API_URL = "https://script.google.com/macros/s/AKfycbyGrIixtUPG1UMU3vjNbqrz2ydN9SznH3CP-vXAUXf8nqJGDkTQaZsLlmyZUogmFq93Mg/exec";
@@ -88,61 +114,74 @@ let currentInvite = null;
 const nav = document.getElementById('nav');
 const hero = document.getElementById('heroImg');
 const stickyPhoto = document.getElementById('stickyPhoto');
-function onScroll(){const y=window.scrollY||0;if(nav)nav.classList.toggle('scrolled',y>40);if(hero){hero.style.setProperty('--py',Math.min(y*.18,90)+'px');hero.style.setProperty('--scale',1+Math.min(y*.00012,.06));}if(stickyPhoto){const wrap=stickyPhoto.closest('.sticky-wrap');if(wrap){const r=wrap.getBoundingClientRect();const p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));stickyPhoto.style.setProperty('--s',1+p*.16);stickyPhoto.style.setProperty('--y',(-p*50)+'px');}}}
+
+function onScroll(){
+  const y=window.scrollY||0;
+  if(nav)nav.classList.toggle('scrolled',y>40);
+  if(hero && !document.body.classList.contains('locked')){
+    hero.style.setProperty('--py',Math.min(y*.18,90)+'px');
+    hero.style.setProperty('--scale',1+Math.min(y*.00012,.06));
+  }
+  if(stickyPhoto){
+    const wrap=stickyPhoto.closest('.sticky-wrap');
+    if(wrap){
+      const r=wrap.getBoundingClientRect();
+      const p=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));
+      stickyPhoto.style.setProperty('--s',1+p*.16);
+      stickyPhoto.style.setProperty('--y',(-p*50)+'px');
+    }
+  }
+}
 addEventListener('scroll',onScroll,{passive:true});onScroll();
-const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.16});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.16});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
 function validApi(){return API_URL.startsWith('https://script.google.com/macros/s/')&&API_URL.endsWith('/exec');}
 function esc(s){return String(s ?? '').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
-async function lookupInvite(raw, ui){
-  const err = ui === 'gate' ? document.getElementById('gateErr') : document.getElementById('err');
-  const panel = document.getElementById('panel');
+
+async function lookupByName(raw){
+  const err=document.getElementById('gateErr');
   if(err) err.classList.remove('show');
-  if(ui !== 'gate'){
-    panel.classList.add('show');
-    panel.innerHTML='<p class="hint">Checking invite...</p>';
-  }
-  if(!validApi()){
-    const msg='The RSVP backend is not connected yet. Paste your deployed Apps Script Web App URL into API_URL.';
-    if(ui !== 'gate') panel.innerHTML='';
-    if(err){err.textContent=msg;err.classList.add('show');}
-    return;
-  }
+  if(!raw){ if(err){err.textContent='Please enter a guest name from your invitation.';err.classList.add('show');} return; }
+  if(!validApi()){ if(err){err.textContent='The site backend is not connected yet. Paste your deployed Apps Script Web App URL into API_URL.';err.classList.add('show');} return; }
   try{
-    const res=await fetch(API_URL,{method:'POST',body:JSON.stringify({action:'lookup',code:raw})});
+    const res=await fetch(API_URL,{method:'POST',body:JSON.stringify({action:'lookupByName',name:raw})});
     const inv=await res.json();
-    if(!inv.success){
-      if(err){err.textContent=inv.message||'That passcode was not found.';err.classList.add('show');}
-      if(ui !== 'gate') panel.classList.remove('show');
-      return;
-    }
+    if(!inv.success){ if(err){err.textContent=inv.message||'That name was not found on the invite list.';err.classList.add('show');} return; }
     currentInvite=inv;
     sessionStorage.setItem('weddingUnlocked','1');
-    sessionStorage.setItem('weddingCode', raw);
+    sessionStorage.setItem('weddingName', raw);
+    applyInvite(inv);
     document.documentElement.classList.remove('locked');
     document.body.classList.remove('locked');
-    const rsvpCode=document.getElementById('code');
-    if(rsvpCode) rsvpCode.value=raw;
-    renderInvite(inv);
-    if(ui === 'gate') window.scrollTo({top:0,behavior:'smooth'});
-  }catch(e){
-    const msg='Could not connect to RSVP backend. Check your Apps Script deployment.';
-    if(err){err.textContent=msg;err.classList.add('show');}
-    if(ui !== 'gate') panel.classList.remove('show');
-  }
+    window.scrollTo({top:0,behavior:'smooth'});
+  }catch(e){ if(err){err.textContent='Could not connect to the site backend. Check your Apps Script deployment.';err.classList.add('show');} }
 }
-function unlock(){
-  const raw=document.getElementById('code').value.trim().toUpperCase();
-  lookupInvite(raw,'rsvp');
+
+function applyInvite(inv){
+  const hasIndian = !!inv.indianEvent;
+  const dateLabel = hasIndian ? 'June 12–13, 2027' : 'June 12, 2027';
+  const locationLabel = hasIndian ? 'Loudoun County, Virginia' : 'Leesburg, Virginia';
+  const venueLabel = hasIndian ? 'Wedding Weekend' : 'Faith Like A Mustard Seed Farm';
+
+  const title = document.querySelector('title'); if(title) title.textContent = `Nik & Julianna | ${dateLabel}`;
+  const hd=document.getElementById('heroDateLabel'); if(hd) hd.textContent=dateLabel;
+  const hv=document.getElementById('heroVenueLabel'); if(hv) hv.textContent=venueLabel;
+  const hl=document.getElementById('heroLocationLabel'); if(hl) hl.textContent=locationLabel;
+
+  const footerP=document.querySelector('footer p'); if(footerP) footerP.textContent = `${dateLabel} • ${locationLabel}`;
+  const headline=document.getElementById('eventsHeadline'); if(headline) headline.textContent = hasIndian ? 'Wedding Weekend' : 'Wedding Celebration';
+  const intro=document.getElementById('eventsIntro'); if(intro) intro.textContent = hasIndian ? 'Your party is invited to both celebrations.' : 'Your party is invited to our wedding celebration.';
+  const indianCard=document.getElementById('indianEventCard'); if(indianCard) indianCard.style.display = hasIndian ? '' : 'none';
 }
+
 function unlockFromGate(){
-  const raw=document.getElementById('gateCode').value.trim().toUpperCase();
-  lookupInvite(raw,'gate');
+  const raw=document.getElementById('gateCode').value.trim();
+  lookupByName(raw);
 }
 document.addEventListener('keydown',e=>{
   if(e.key==='Enter' && document.activeElement && document.activeElement.id==='gateCode') unlockFromGate();
 });
-function renderInvite(inv){const panel=document.getElementById('panel');panel.innerHTML=`<div class="welcome">Welcome, ${esc(inv.party)}</div><p class="hint">Seats reserved: ${inv.guests.length}</p><div class="eventbox"><div class="grid"><div class="mini"><b>Date</b>June 12, 2027</div><div class="mini"><b>Meal choices</b>Vegetarian or Chicken</div><div class="mini"><b>Venue</b>Faith Like A Mustard Seed Farm</div><div class="mini"><b>Invite</b>${inv.guests.length} guest${inv.guests.length>1?'s':''}</div></div></div>${inv.guests.map((g,i)=>`<div class="guest"><h4>${esc(g)}</h4><p class="hint">Attending?</p><div class="meals"><label><input type="radio" name="attending_${i}" value="Yes"><span>Yes</span></label><label><input type="radio" name="attending_${i}" value="No"><span>No</span></label></div><p class="hint">Meal choice</p><div class="meals"><label><input type="radio" name="meal_${i}" value="Vegetarian"><span>Vegetarian</span></label><label><input type="radio" name="meal_${i}" value="Chicken"><span>Chicken</span></label></div></div>`).join('')}<div class="indian ${inv.indianEvent?'show':''}"><h3>Secondary Indian Celebration</h3><p>This invite includes access to the Indian celebration details. More details will be shared here as we get closer.</p></div><button class="save" onclick="saveRsvp()">Save RSVP</button><div class="saved" id="saved">RSVP saved.</div>`;}
-async function saveRsvp(){if(!currentInvite)return;const responses=currentInvite.guests.map((g,i)=>({guest:g,attending:document.querySelector(`input[name="attending_${i}"]:checked`)?.value||'',meal:document.querySelector(`input[name="meal_${i}"]:checked`)?.value||'',indianEventRSVP:currentInvite.indianEvent?'Invited':'Not Invited'}));await fetch(API_URL,{method:'POST',body:JSON.stringify({action:'submit',code:currentInvite.code,party:currentInvite.party,responses})});document.getElementById('saved').classList.add('show');}
 </script>
 
 

@@ -219,28 +219,130 @@ body.edit-mode img{
   .track{padding:0 20px 20px;}
 }
 
+
+/* CLEAN EVENT / SAVE-THE-DATE SECTION */
+#events{
+  min-height:auto;
+  padding:125px 22px 130px;
+}
+#events .events-wrap{
+  max-width:1080px;
+  width:100%;
+  margin:0 auto;
+  text-align:center;
+}
+#events .bigline{
+  max-width:980px;
+  margin:0 auto;
+}
+.event-layout{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  margin:46px auto 0;
+  max-width:980px;
+  align-items:stretch;
+}
+.event-layout.single{
+  grid-template-columns:minmax(0,720px);
+  justify-content:center;
+  max-width:760px;
+}
+.event-card{
+  background:rgba(255,255,255,.90);
+  border:1px solid rgba(24,56,45,.12);
+  border-radius:30px;
+  padding:38px 34px;
+  text-align:center;
+  box-shadow:0 28px 90px rgba(24,56,45,.12);
+}
+.event-card h3{
+  font-family:Cormorant Garamond,serif;
+  font-size:clamp(34px,4vw,52px);
+  font-weight:300;
+  line-height:1;
+  margin:0;
+  color:var(--green);
+}
+.event-date{
+  margin:20px 0 18px;
+  color:var(--gold);
+  font-size:13px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+.event-place{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:17px;
+  margin:0;
+}
+.event-place strong{
+  color:var(--green);
+  font-weight:600;
+}
+.event-card a{
+  display:inline-block;
+  margin-top:26px;
+  border-radius:999px;
+  background:var(--green);
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:12px;
+  padding:14px 20px;
+}
+.event-note{
+  max-width:660px;
+  margin:34px auto 0;
+  color:var(--muted);
+  line-height:1.8;
+  font-size:15px;
+}
+@media(max-width:760px){
+  #events{padding:95px 20px 105px;}
+  .event-layout,.event-layout.single{grid-template-columns:1fr;max-width:100%;gap:16px;margin-top:34px;}
+  .event-card{padding:30px 22px;border-radius:26px;}
+  .event-place{font-size:15px;}
+}
+
 </style>
 </head>
 <body class="locked">
 <nav class="nav gate-nav scrolled" id="nav"><a class="brand" href="#">Nik &amp; Julianna</a><div class="gate-meta"></div><div class="links"><a href="#events">Events</a><a href="#story">Story</a><a href="#accommodations">Accommodations</a><a href="#gallery">Gallery</a><a href="#registry">Registry</a></div></nav>
 <section class="hero"><img id="heroImg" src="images/photo1.jpg" alt="Nik and Julianna" style="--py: 90px; --scale: 1.06;"><div class="shade"></div><div class="hero-copy"><h1 class="fade-in d2" spellcheck="true">Nik <em>&amp;</em> Julianna</h1><div class="hero-date-clean fade-in d3" id="heroDateLabel" spellcheck="true">June 12–13, 2027</div><div class="hero-venue-clean fade-in d3" id="heroVenueLabel" spellcheck="true">Wedding Weekend</div><div class="hero-location-clean fade-in d3" id="heroLocationLabel" spellcheck="true">Loudoun County, Virginia</div></div><div class="gate-box" id="gateBox"><h2 spellcheck="true">Enter Your Name</h2><div class="gate-inputrow"><input id="gateCode" type="text" placeholder="Enter your name"><button onclick="unlockFromGate()">Open</button></div><p class="gate-hint" spellcheck="true">Enter any guest name listed on your save-the-date invitation to open the wedding details.</p><div class="gate-error" id="gateErr">That name was not found on the invite list.</div></div><div class="unlock-cue">Enter name to continue</div></section>
 <section class="apple-section cream" id="events">
-  <div class="reveal in" style="max-width:1050px;width:100%">
+  <div class="events-wrap reveal in">
     <span class="eyebrow" spellcheck="true">Save the Date</span>
-    <h2 class="bigline" id="eventsHeadline" style="color:var(--green)" spellcheck="true">Wedding Weekend</h2>
-    <p class="body" id="eventsIntro" spellcheck="true">Your party is invited to both celebrations.</p>
-    <div class="travel-grid" id="eventCards">
-      <div class="travel-card">
+    <h2 class="bigline" id="eventsHeadline" style="color:var(--green)" spellcheck="true">Wedding Celebration</h2>
+    <p class="body" id="eventsIntro" spellcheck="true">We’re excited to celebrate with you.</p>
+
+    <div class="event-layout single" id="eventCards">
+      <article class="event-card" id="weddingEventCard">
         <h3 spellcheck="true">Wedding Day</h3>
-        <p spellcheck="true"><strong>Saturday, June 12, 2027</strong></p>
-        <p spellcheck="true">Faith Like A Mustard Seed Farm<br>42906 Lucketts Road<br>Leesburg, VA 20176</p>
-      </div>
-      <div class="travel-card" id="indianEventCard" style="">
+        <div class="event-date" spellcheck="true">Saturday, June 12, 2027</div>
+        <p class="event-place" spellcheck="true">
+          <strong>Faith Like A Mustard Seed Farm</strong><br>
+          42906 Lucketts Road<br>
+          Leesburg, Virginia 20176
+        </p>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=42906+Lucketts+Road+Leesburg+VA+20176" target="_blank" rel="noopener">View Venue</a>
+      </article>
+
+      <article class="event-card" id="indianEventCard" style="display:none">
         <h3 spellcheck="true">Indian Celebration</h3>
-        <p spellcheck="true"><strong>Sunday, June 13, 2027</strong></p>
-        <p spellcheck="true">Loudoun County, Virginia<br>Additional details will be shared as we get closer.</p>
-      </div>
+        <div class="event-date" spellcheck="true">Sunday, June 13, 2027</div>
+        <p class="event-place" spellcheck="true">
+          <strong>Loudoun County, Virginia</strong><br>
+          Additional details will be shared as we get closer.
+        </p>
+      </article>
     </div>
+
+    <p class="event-note" id="eventsNote" spellcheck="true">Formal invitation and additional details to follow.</p>
   </div>
 </section>
 <section class="apple-section dark" id="story"><div class="reveal in"><span class="eyebrow" spellcheck="true">Our Wedding</span><h2 class="bigline" spellcheck="true">A celebration with the people we love most.</h2><p class="body" spellcheck="true">We cannot wait to tie the knot June 12, 2027!</p></div></section>
@@ -313,7 +415,9 @@ function applyInvite(inv){
 
   const footerP=document.querySelector('footer p'); if(footerP) footerP.textContent = `${dateLabel} • ${locationLabel}`;
   const headline=document.getElementById('eventsHeadline'); if(headline) headline.textContent = hasIndian ? 'Wedding Weekend' : 'Wedding Celebration';
-  const intro=document.getElementById('eventsIntro'); if(intro) intro.textContent = hasIndian ? 'Your party is invited to both celebrations.' : 'Your party is invited to our wedding celebration.';
+  const intro=document.getElementById('eventsIntro'); if(intro) intro.textContent = hasIndian ? 'We’re excited to celebrate with you across both wedding weekend events.' : 'We’re excited to celebrate with you.';
+  const note=document.getElementById('eventsNote'); if(note) note.textContent = hasIndian ? 'Formal invitation, timing, and additional details to follow.' : 'Formal invitation and additional details to follow.';
+  const eventCards=document.getElementById('eventCards'); if(eventCards) eventCards.classList.toggle('single', !hasIndian);
   const indianCard=document.getElementById('indianEventCard'); if(indianCard) indianCard.style.display = hasIndian ? '' : 'none';
 }
 
@@ -341,7 +445,7 @@ document.addEventListener('keydown',e=>{
   const skipTags = new Set(['SCRIPT','STYLE','INPUT','BUTTON','TEXTAREA','SELECT','OPTION','NAV']);
   const editableSelector = [
     'h1','h2','h3','p','li','span.eyebrow','span.pill','div.venue-address','footer div','footer p',
-    '.hero-date-clean','.hero-venue-clean','.hero-location-clean','.bigline','.body','.travel-card h3','.travel-card p','.registry-card h3','.registry-card p','.registry-note'
+    '.hero-date-clean','.hero-venue-clean','.hero-location-clean','.bigline','.body','.event-card h3','.event-date','.event-place','.event-note','.travel-card h3','.travel-card p','.registry-card h3','.registry-card p','.registry-note'
   ].join(',');
 
   function makeEditable(){
